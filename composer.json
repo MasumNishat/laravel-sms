@@ -1,0 +1,45 @@
+{
+  "name": "masum/sms-gateway",
+  "description": "It is a Laravel package which will serve as gateway to send SMS through various providers. It supports multiple sms gateways, and easily extendable to support new gateways.",
+  "type": "library",
+  "keywords": [
+    "Laravel",
+    "Laravel SMS gateway",
+    "Nexmo",
+    "Twilio",
+    "MessageBird",
+    "BulkSMS",
+    "SSL Wireless"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Al Masum Nishat",
+      "email": "masum.nishat21@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Masum\\SmsGateway\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Masum\\SmsGateway\\": "src/",
+      "Masum\\SmsGatewayTest\\": "test/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Masum\\SmsGateway\\SmsServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "twilio/sdk": "^8.8",
+    "messagebird/php-rest-api": "^3.1",
+    "vonage/client": "^4.2.0"
+  }
+}
